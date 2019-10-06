@@ -88,7 +88,7 @@ have to create user and then many posts with user_id of this user
 $this->user = (new UserFactory())->get();
 
 for ($i=1; $i<=10; $i++) {
-    (new PostFactory())->get(['address_id' => $address->id]);
+    (new PostFactory())->get(['user_id' => $this->user->id]);
 }
 ``` 
 
